@@ -1,10 +1,20 @@
-document.getElementById('text-form').addEventListener('submit', function(event) {
+document.getElementById('text-form').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent default form submission
 
-    // Get the value from the textarea
-    var text = document.getElementById('text-input').value;
+// Gemini Nano prompt
+const canCreate = await window.ai.canCreateTextSession();
 
-    // Display the submitted text
+if (canCreate !== "no") {
+  const session = await window.ai.createTextSession();
+
+  // Prompt the model
+  var textPrompt = document.getElementById('text-input').value;
+  var result = await session.prompt(textPrompt);
+}
+
+    // Display the results
     var resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '<h2>Response:</h2><p>' + text + '</p>';
+    resultDiv.innerHTML = result + '</p>';
 });
+
+
