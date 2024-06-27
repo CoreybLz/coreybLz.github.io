@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 <body>
-    <h1> Talk with Gemini Nano!</h1>
-    <form id="text-form">
-        <textarea id="text-input" placeholder="Ask your question..."></textarea>
-        <br><br>
+    <h1 id="headerText"> Talk with Gemini Nano!</h1>
+    <form id="text-form" onsubmit="return false;">
+        <div class="input-container">
+            <textarea id="text-input" placeholder="Ask your question..."></textarea>
+            <button type="submit" id="submit-button">Submit</button>
+        </div>
+        <br>
         <div id="submission-container">
             <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <button type="submit" id="submit-button">Submit</button>
+            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
             <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
         </div>
     </form>

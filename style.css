@@ -4,6 +4,19 @@ body {
     background-color: lightblue;
 }
 
+#headerText {
+
+}
+
+.rainbowText {
+  animation: rainbow 1s linear infinite;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+}
+
 #text-input {
     width: 100%;
     max-width: 500px;
@@ -21,7 +34,7 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    margin: 0;
+    margin-left: 20px;
 }
 
 #submit-button:hover {
@@ -53,6 +66,16 @@ body {
     margin-left: 20px;
     margin-right: 20px;
     padding: 0;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  16% { color: orange; }
+  33% { color: yellow; }
+  50% { color: green; }
+  66% { color: blue; }
+  83% { color: indigo; }
+  100% { color: violet; }
 }
 
 @keyframes dance {
