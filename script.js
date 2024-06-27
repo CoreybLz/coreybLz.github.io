@@ -1,6 +1,12 @@
 document.getElementById('text-form').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent default form submission
 
+// MAKE EM DANCE
+var oowboyImages = document.querySelectorAll('.oowboyStyling');
+oowboyImages.forEach(function(image) {
+    image.classList.add('dance');
+});
+
 // Gemini Nano prompt
 const canCreate = await window.ai.canCreateTextSession();
 
@@ -12,9 +18,14 @@ if (canCreate !== "no") {
   var result = await session.prompt(textPrompt);
 }
 
-    // Display the results
-    var resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = result + '</p>';
+// Display the results
+var resultDiv = document.getElementById('results');
+resultDiv.innerHTML = result + '</p>';
+
+// Remove the dance animation
+oowboyImages.forEach(function(image) {
+    image.classList.remove('dance');
+});
 });
 
 
