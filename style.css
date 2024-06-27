@@ -1,35 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     padding: 20px;
-    background-color: lightblue;
+    background-color: #f0f8ff;
+    color: #333;
 }
 
 #headerText {
-  font-family: Helvetica, sans-serif;
-  font-weight: 800;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  color: #0056b3;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .rainbowText {
-  animation: rainbow 1s linear infinite;
+  animation: rainbow 2s linear infinite;
 }
 
 .input-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 #text-input {
     width: 100%;
     max-width: 500px;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #submit-button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 12px 24px;
+    font-size: 1em;
     background-color: #007bff;
-    color: white;
+    color: #FFFFFF;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -40,32 +50,37 @@ body {
 
 #submit-button:hover {
     background-color: #0056b3;
-    scale: 1.1;
+    transform: scale(1.1);
 }
 
 #submit-button:focus {
     background-color: #0056b3;
-    scale: 1.1;
+    transform: scale(1.1);
+    outline: none;
 }
 
 #results {
     margin-top: 20px;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-align: justify;
     max-width: 600px;
     font-weight: 300;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 #submission-container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .oowboyStyling {
-    width: 125px;
-    height: 125px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100px;
+    height: 100px;
     padding: 0;
 }
 
@@ -79,7 +94,7 @@ body {
   100% { color: violet; }
 }
 
-@keyframes dance {
+/* @keyframes dance {
     0%, 100% {
       transform: translate(0, 0);
     }
@@ -92,8 +107,17 @@ body {
     75% {
       transform: translate(7px, 7px);
     }
+  } */
+
+@keyframes dance {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 
 .oowboyStyling.dance {
-    animation: dance 0.3s infinite;
+    animation: dance 1s infinite;
 }

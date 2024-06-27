@@ -10,13 +10,20 @@ document.getElementById('text-form').addEventListener('submit', async function(e
 
 // MAKE EM DANCE
 var oowboyImages = document.querySelectorAll('.oowboyStyling');
-oowboyImages.forEach(function(image) {
-    image.classList.add('dance');
+oowboyImages.forEach(function(image, index) {
+    setTimeout(function() {
+        image.classList.add('dance');
+    }, index * 50); 
 });
 
 // RAINBOWWWWW
 var headerText = document.getElementById('headerText');
     headerText.classList.add('rainbowText');
+
+// Your question
+var submittedPrompt = document.getElementById('text-input').value;
+var resultDiv = document.getElementById('results');
+resultDiv.innerHTML = `<h4>You say:</h4> ${submittedPrompt}`;
 
 // Gemini Nano prompt
 const canCreate = await window.ai.canCreateTextSession();
@@ -34,7 +41,10 @@ if (canCreate !== "no") {
 
 // Display the results
 var resultDiv = document.getElementById('results');
-resultDiv.innerHTML = formattedResult;
+resultDiv.innerHTML = `
+<h4>You say:</h4> ${submittedPrompt}
+<br>
+<h4>Gemini Nano says:</h4> ${formattedResult}`;
 
 // Remove the dance animation
 oowboyImages.forEach(function(image) {
