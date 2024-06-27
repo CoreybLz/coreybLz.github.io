@@ -40,6 +40,6 @@ resultDiv.innerHTML = formattedResult;
 oowboyImages.forEach(function(image) {
     image.classList.remove('dance');
     });
+
+headerText.classList.remove('rainbowText');
 });
-
-
