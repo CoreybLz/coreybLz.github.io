@@ -1,32 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OOW BOY</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <h1 id="headerText"> Talk with Gemini Nano!</h1>
-    <form id="text-form" onsubmit="return false;">
-        <div class="input-container">
-            <textarea id="text-input" placeholder="Ask your question..."></textarea>
-            <button type="submit" id="submit-button">Submit</button>
-        </div>
-        <br>
-        <div id="submission-container">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-            <img class="oowboyStyling" src="images/oowboy.png" alt="OOW BOY">
-        </div>
-    </form>
-    <div id="results">
-        <!-- Submitted text will appear here -->
+<body class="flex flex-col min-h-screen">
+  <div class="flex-1 flex overflow-hidden">
+    <div class="bg-blue-900 text-white p-6 w-72 flex-shrink-0">
+      <div class="flex justify-start w-full">
+        <img src="images/infotrust-logo-white.png" alt="InfoTrust Logo" class="h-8 w-auto object-contain mb-10">
+      </div>
+      <ul class="list-none p-0 space-y-5">
+        <li>
+          <a href="#" class="flex items-center gap-3">
+            <i class="fas fa-th-large"></i>
+            <span>Dashboards</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center gap-3">
+            <i class="fas fa-globe"></i>
+            <span>Websites</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center gap-3">
+            <i class="fas fa-shield-alt"></i>
+            <span>Policies</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center gap-3">
+            <i class="fas fa-tags"></i>
+            <span>Tag Inventory</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center gap-3">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-auto pt-6 flex items-center justify-center gap-2">
+        <span class="text-gray-400 italic text-xs">powered by</span>
+        <img src="images/tag-inspector-logo-white.png" alt="Tag Inspector Logo" class="h-6">
+      </div>
     </div>
-
-    <script src="script.js"></script> <!-- Reference to external JavaScript file -->
+    <div class="content flex-grow p-8 overflow-auto">
+      <div class="tabs-container mb-6">
+        <div class="tabs">
+          <button class="tab-btn active">Tab 1</button>
+          <button class="tab-btn">Tab 2</button>
+          <button class="tab-btn">Tab 3</button>
+          <button class="tab-btn">Tab 4</button>
+          <button class="tab-btn">Tab 5</button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card">
+          <img src="dashboard-examples/dashboard-1.png" alt="Dashboard 1" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-2.png" alt="Dashboard 2" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-3.png" alt="Dashboard 3" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-4.png" alt="Dashboard 4" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-5.png" alt="Dashboard 5" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-6.png" alt="Dashboard 6" class="dashboard-image">
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-gray-200 p-4 flex justify-center items-center">
+    <div class="flex space-x-8">
+      <a href="#" class="text-sm">About Us</a>
+      <a href="#" class="text-sm">Contact Us</a>
+      <a href="#" class="text-sm">Your Privacy Settings</a>
+    </div>
+  </footer>
 </body>
 </html>
