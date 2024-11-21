@@ -12,10 +12,85 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="flex flex-col min-h-screen">
+    <div id="header"></div>
     <div class="flex-1 flex overflow-hidden">
         <div id="navigation"></div>
         <div class="content flex-grow p-8 overflow-auto">
-            <h1>Text</h1>
+            <!-- Introduction Section -->
+            <h1 class="text-2xl font-bold mb-4">Website Tags & Privacy Education</h1>
+            <p class="text-gray-600 mb-8">Understanding website tags, their purposes, and implications for user privacy.</p>
+
+            <!-- Tag Types Section -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-semibold mb-4">Common Types of Website Tags</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-medium mb-2">Analytics Tags</h3>
+                        <p class="text-sm text-gray-600">Track user behavior, page views, and site performance. Examples include Google Analytics and Adobe Analytics.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-medium mb-2">Marketing Tags</h3>
+                        <p class="text-sm text-gray-600">Enable advertising, retargeting, and conversion tracking. Examples include Meta Pixel and LinkedIn Insight.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-medium mb-2">Functionality Tags</h3>
+                        <p class="text-sm text-gray-600">Power features like chat widgets, video players, and social media embeds.</p>
+                    </div>
+                    <div class="border rounded-lg p-4">
+                        <h3 class="font-medium mb-2">Performance Tags</h3>
+                        <p class="text-sm text-gray-600">Monitor site speed, errors, and technical performance metrics.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Section -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-semibold mb-4">Privacy Implications</h2>
+                <ul class="list-disc pl-6 space-y-2 text-gray-600">
+                    <li>Data Collection: Types of information gathered by different tags</li>
+                    <li>User Consent: Requirements for GDPR, CCPA, and other privacy laws</li>
+                    <li>Data Storage: Where and how collected information is stored</li>
+                    <li>Third-party Access: Understanding who has access to collected data</li>
+                </ul>
+            </div>
+
+            <!-- Best Practices Section -->
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-semibold mb-4">Implementation Best Practices</h2>
+                <div class="space-y-4">
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-medium mb-1">Tag Management</h3>
+                        <p class="text-sm text-gray-600">Use a tag management system for better control and governance.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-medium mb-1">Consent Management</h3>
+                        <p class="text-sm text-gray-600">Implement proper consent mechanisms before loading tags.</p>
+                    </div>
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h3 class="font-medium mb-1">Regular Audits</h3>
+                        <p class="text-sm text-gray-600">Regularly review and update tag implementations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Additional Resources</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50">
+                        <h3 class="font-medium mb-2 text-blue-600">Privacy Guidelines</h3>
+                        <p class="text-sm text-gray-600">Comprehensive guide to privacy regulations</p>
+                    </a>
+                    <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50">
+                        <h3 class="font-medium mb-2 text-blue-600">Tag Implementation Guide</h3>
+                        <p class="text-sm text-gray-600">Best practices for implementing tags</p>
+                    </a>
+                    <a href="#" class="block p-4 border rounded-lg hover:bg-gray-50">
+                        <h3 class="font-medium mb-2 text-blue-600">Compliance Checklist</h3>
+                        <p class="text-sm text-gray-600">Steps to ensure tag compliance</p>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
     <div id="footer"></div>
