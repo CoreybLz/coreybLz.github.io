@@ -26,15 +26,20 @@
   .flex-1 {
     flex: 1;
     overflow: hidden; /* Contain scrollable content */
+    position: relative;
   }
   
   .content {
     flex-grow: 1;
-    padding: 32px;
+    padding: 2rem;
     background-color: var(--gray-3);
     min-width: 0;
     overflow-y: auto; /* Enable vertical scrolling */
-    height: calc(100vh - 52px); /* Slightly reduced to remove gap */
+    height: calc(100vh - 64px); /* Adjust to account for footer */
+    background-color: var(--gray-3);
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
   }
 
   .card {
@@ -128,20 +133,55 @@ ul.list-none a:hover {
 }
 
 footer {
-    background: transparent;
-    border-top: 1px solid rgba(230, 231, 232, 0.2);
-    padding: 16px 32px;
+    background-color: var(--gray-3);
+    padding: 1rem;
     position: sticky;
     bottom: 0;
     width: 100%;
-    z-index: 10;
+    border-top: 1px solid var(--gray-2);
+    z-index: 30;
     margin-top: -1px; /* Remove gap */
+    z-index: 2;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+  color: var(--dark-blue-1);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--blue-1);
 }
 
 /* Add specific size control for dashboard-6 */
 img[src*="dashboard-6"] {
     max-width: 90%; /* Reduce size by 10% */
     height: auto;
+}
+
+/* Add to style.css */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  background-color: #f9fafb;
+  font-weight: 500;
+}
+
+td, th {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 /* Responsive breakpoints */

@@ -12,48 +12,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="flex flex-col min-h-screen">
-  <div class="flex-1 flex overflow-hidden">
-    <div class="bg-blue-900 text-white p-6 w-72 flex-shrink-0">
-      <div class="flex justify-start w-full">
-        <img src="images/infotrust-logo-white.png" alt="InfoTrust Logo" class="h-8 w-auto object-contain mb-10">
-      </div>
-      <ul class="list-none p-0 space-y-5">
-        <li>
-          <a href="#" class="flex items-center gap-3">
-            <i class="fas fa-th-large"></i>
-            <span>Dashboards</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center gap-3">
-            <i class="fas fa-globe"></i>
-            <span>Websites</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center gap-3">
-            <i class="fas fa-shield-alt"></i>
-            <span>Policies</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center gap-3">
-            <i class="fas fa-tags"></i>
-            <span>Tag Inventory</span>
-          </a>
-        </li>
-        <li>
-          <a href="#" class="flex items-center gap-3">
-            <i class="fas fa-graduation-cap"></i>
-            <span>Education</span>
-          </a>
-        </li>
-      </ul>
-      <div class="mt-auto pt-6 flex items-center justify-center gap-2">
-        <span class="text-gray-400 italic text-xs">powered by</span>
-        <img src="images/tag-inspector-logo-white.png" alt="Tag Inspector Logo" class="h-6">
-      </div>
-    </div>
+  <div id="header"></div>
+  <main class="flex-1 flex overflow-hidden"> <!-- Changed from div to semantic main -->
+    <div id="navigation"></div>
     <div class="content flex-grow p-8 overflow-auto">
       <div class="tabs-container mb-6">
         <div class="tabs">
@@ -85,13 +46,15 @@
         </div>
       </div>
     </div>
-  </div>
-  <footer class="bg-gray-200 p-4 flex justify-center items-center">
-    <div class="flex space-x-8">
-      <a href="#" class="text-sm">About Us</a>
-      <a href="#" class="text-sm">Contact Us</a>
-      <a href="#" class="text-sm">Your Privacy Settings</a>
-    </div>
-  </footer>
+  </main>
+  <div id="footer"></div>
+  <script src="components/header.js"></script>
+  <script src="components/navigation.js"></script>
+  <script src="components/footer.js"></script>
+  <script>
+    document.getElementById('header').innerHTML = header('Company Website'); // Pass page-specific title
+    document.getElementById('navigation').innerHTML = navigation;
+    document.getElementById('footer').innerHTML = footer;
+  </script>
 </body>
 </html>
