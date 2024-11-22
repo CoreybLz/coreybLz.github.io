@@ -14,7 +14,47 @@
 <body class="flex flex-col min-h-screen">
     <div id="header"></div>
     <div class="flex-1 flex overflow-hidden">
-        <div id="navigation"></div>
+        <div class="bg-blue-900 text-white p-6 w-72 flex-shrink-0">
+            <div class="flex justify-start w-full">
+                <img src="images/infotrust-logo-white.png" alt="InfoTrust Logo" class="h-8 w-auto object-contain mb-10">
+            </div>
+            <ul class="list-none p-0 space-y-5">
+                <li>
+                    <a href="home.html" class="flex items-center gap-3">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="websites.html" class="flex items-center gap-3">
+                        <i class="fas fa-globe"></i>
+                        <span>Websites</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="policies.html" class="flex items-center gap-3">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Policies</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tag-inventory.html" class="flex items-center gap-3">
+                        <i class="fas fa-tags"></i>
+                        <span>Tag Inventory</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="education.html" class="flex items-center gap-3">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mt-auto pt-6 flex items-center justify-center gap-2">
+                <span class="text-gray-400 italic text-xs">powered by</span>
+                <img src="images/tag-inspector-logo-white.png" alt="Tag Inspector Logo" class="h-6">
+            </div>
+        </div>
         <div class="content flex-grow p-8 overflow-auto">
             <!-- Introduction Section -->
             <h1 class="text-2xl font-bold mb-4">Website Tags & Privacy Education</h1>
@@ -93,13 +133,16 @@
             </div>
         </div>
     </div>
-    <div id="footer"></div>
-
+    <footer class="absolute bottom-0 flex justify-center items-center w-full">
+        <div class="flex space-x-8 py-4">
+            <a href="#" class="text-sm text-gray-500 hover:text-gray-700">About Us</a>
+            <a href="#" class="text-sm text-gray-500 hover:text-gray-700">Contact Us</a>
+            <a href="#" class="text-sm text-gray-500 hover:text-gray-700">Your Privacy Settings</a>
+        </div>
+    </footer>
     <script src="components/navigation.js"></script>
-    <script src="components/footer.js"></script>
     <script>
     document.getElementById('navigation').innerHTML = navigation;
-    document.getElementById('footer').innerHTML = footer;
     </script>
 </body>
 </html>

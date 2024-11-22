@@ -45,28 +45,23 @@
   .card {
     background: white;
     border-radius: 8px;
-    padding: 4px; /* Reduced from 8px */
+    padding: 4px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex; /* Added */
-    justify-content: center; /* Added */
-    align-items: center; /* Added */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     line-height: 0; /* Ensures no extra vertical space */
-    height: fit-content; /* Add this */
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    height: fit-content;
 }
 
 .dashboard-image {
     width: 100%;
-    height: 100%; /* Changed from auto */
-    object-fit: contain; /* Changed from cover */
+    height: 100%;
+    object-fit: contain;
     border-radius: 4px;
     display: block;
-    margin: 0; /* Added */
+    margin: 0;
 }
 
 .grid {
@@ -112,6 +107,17 @@
     color: var(--blue-1);
     border-bottom: 2px solid var(--blue-1);
     background-color: rgba(8, 74, 135, 0.08);
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab-content.active {
+    display: grid;
+    opacity: 1;
 }
 
 .bg-blue-900 {

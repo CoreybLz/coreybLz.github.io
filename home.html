@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoTrust Privacy Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen">
+  <div id="header"></div>
+  <main class="flex-1 flex overflow-hidden">
+    <div class="bg-blue-900 text-white p-6 w-72 flex-shrink-0">
+      <div class="flex justify-start w-full">
+        <img src="images/infotrust-logo-white.png" alt="InfoTrust Logo" class="h-8 w-auto object-contain mb-10">
+      </div>
+      <ul class="list-none p-0 space-y-5">
+        <li>
+          <a href="home.html" class="flex items-center gap-3">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="websites.html" class="flex items-center gap-3">
+            <i class="fas fa-globe"></i>
+            <span>Websites</span>
+          </a>
+        </li>
+        <li>
+          <a href="policies.html" class="flex items-center gap-3">
+            <i class="fas fa-shield-alt"></i>
+            <span>Policies</span>
+          </a>
+        </li>
+        <li>
+          <a href="tag-inventory.html" class="flex items-center gap-3">
+            <i class="fas fa-tags"></i>
+            <span>Tag Inventory</span>
+          </a>
+        </li>
+        <li>
+          <a href="education.html" class="flex items-center gap-3">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Education</span>
+          </a>
+        </li>
+      </ul>
+      <div class="mt-auto pt-6 flex items-center justify-center gap-2">
+        <span class="text-gray-400 italic text-xs">powered by</span>
+        <img src="images/tag-inspector-logo-white.png" alt="Tag Inspector Logo" class="h-6">
+      </div>
+    </div>
+    <div class="content flex-grow p-8 overflow-auto">
+      <div class="tabs-container mb-16 mt-4">
+        <div class="tabs mb-8"> <!-- Add margin bottom to tabs div -->
+          <button class="tab-btn active" data-tab="tab1">Cool pie graph shit</button>
+          <button class="tab-btn" data-tab="tab2">Cool metrics and shit</button>
+        </div>
+      </div>
+      <div id="tab1" class="tab-content active grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div class="card">
+          <img src="dashboard-examples/dashboard-1.png" alt="Dashboard 1" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-2.png" alt="Dashboard 2" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-3.png" alt="Dashboard 3" class="dashboard-image">
+        </div>
+      </div>
+      <div id="tab2" class="tab-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div class="card">
+          <img src="dashboard-examples/dashboard-4.png" alt="Dashboard 4" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-5.png" alt="Dashboard 5" class="dashboard-image">
+        </div>
+        <div class="card">
+          <img src="dashboard-examples/dashboard-6.png" alt="Dashboard 6" class="dashboard-image">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="absolute bottom-0 flex justify-center items-center w-full">
+    <div class="flex space-x-8 py-4 ml-72">
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">About Us</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">Contact Us</a>
+        <a href="#" class="text-sm text-gray-500 hover:text-gray-700">Your Privacy Settings</a>
+    </div>
+  </footer>
+  <script src="components/header.js"></script>
+  <script src="components/navigation.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById('header').innerHTML = header('Company Website'); // Pass page-specific title
+    document.getElementById('navigation').innerHTML = navigation;
+  </script>
+</body>
+</html>
